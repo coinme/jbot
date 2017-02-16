@@ -30,6 +30,16 @@ public class Attachment {
     @JsonProperty("footer_icon")
     private String footerIcon;
     private String ts;
+    @JsonProperty("mrkdwn_in")
+    private String[] mrkdwnIn = new String[] { "text", "pretext", "fields" };
+
+    public String[] getMrkdwnIn() {
+        return mrkdwnIn;
+    }
+
+    public void setMrkdwnIn(String[] mrkdwn_in) {
+        this.mrkdwnIn = mrkdwn_in;
+    }
 
     public String getFallback() {
         return fallback;
